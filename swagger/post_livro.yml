@@ -1,0 +1,68 @@
+Cadastra um livro
+Rota para cadastrar um livro no banco de dados
+---
+parameters:
+  - in: body
+    name: body
+    description: Dados do livro a ser criado
+    required: true
+    schema:
+      $ref: '#/definitions/Livro'
+definitions:
+  Livro:
+    type: object
+    required:
+      - titulo
+      - categoria
+      - autor
+      - image_url
+    properties:
+      titulo:
+        type: string
+        example: "O Senhor dos Anéis"
+      categoria:
+        type: string
+        example: "Fantasia"
+      autor:
+        type: string
+        example: "J.R.R. Tolkien"
+      image_url:
+        type: string
+        example: "https://example.com/imagem_livro.jpg"
+responses:
+  201:
+    description: Livro criado com sucesso
+    schema:
+      type: object
+      properties:
+        message:
+          type: string
+        id:
+          type: integer
+    examples:
+      application/json:
+        message: "Livro adicionado!"
+  400:
+    description: Dados inválidos ou incompletos
+    schema:
+      type: object
+      properties:
+        error:
+          type: string
+        details:
+          type: object
+    examples:
+      application/json:
+        error: "Validação falhou"
+        details:
+          titulo: ["Título deve ter entre 5 e 100 caracteres"]
+  500:
+    description: Erro interno no servidor
+    schema:
+      type: object
+      properties:
+        error:
+          type: string
+    examples:
+      application/json:
+        error: "Erro ao adicionar Livro"

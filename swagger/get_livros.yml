@@ -1,0 +1,58 @@
+Busca todos os livros cadastrados
+Rota para buscar todos os livros cadastrados no banco de dados
+---
+parameters: []
+definitions:
+  Livro:
+    type: object
+    required:
+      - id
+      - titulo
+      - categoria
+      - autor
+      - image_url
+    properties:
+      id:
+        type: integer
+        example: 1
+      titulo:
+        type: string
+        example: "O Senhor dos Anéis"
+      categoria:
+        type: string
+        example: "Fantasia"
+      autor:
+        type: string
+        example: "J.R.R. Tolkien"
+      image_url:
+        type: string
+        example: "https://example.com/imagem_livro.jpg"
+responses:
+  200:
+    description: Lista de livros retornada com sucesso
+    schema:
+      type: array
+      items:
+        $ref: '#/definitions/Livro'
+    examples:
+      application/json:
+        - id: 1
+          titulo: "O Senhor dos Anéis"
+          categoria: "Fantasia"
+          autor: "J.R.R. Tolkien"
+          image_url: "https://example.com/imagem_livro.jpg"
+        - id: 2
+          titulo: "1984"
+          categoria: "Ficção Científica"
+          autor: "George Orwell"
+          image_url: "https://example.com/imagem_livro2.jpg"
+  500:
+    description: Erro interno no servidor
+    schema:
+      type: object
+      properties:
+        error:
+          type: string
+    examples:
+      application/json:
+        error: "Erro ao buscar os livros"
