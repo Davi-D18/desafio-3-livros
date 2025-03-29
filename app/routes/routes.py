@@ -13,7 +13,7 @@ main = Blueprint('main', __name__)
 @main.route('/')
 
 def index():
-    return jsonify(message="API Livros")
+    return jsonify(message="API Doação de Livros")
     
 @main.route("/livros", methods=['GET'])
 @swag_from('../../swagger/get_livros.yml')
