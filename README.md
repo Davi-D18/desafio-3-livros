@@ -1,6 +1,6 @@
 # API simples de Doação de Livros
 
-Este projeto é uma API desenvolvida em Flask para gerenciar doações de livros como parte de um Desafio no VNW no módulo de Back-end. A API é consumida pelo seguinte site: [Repositório](https://github.com/Davi-D18/livros_vnw_back-end)
+Este projeto é uma API desenvolvida em Flask para gerenciar doações de livros como parte de um Desafio no VNW no módulo de Back-end. A API é consumida pelo seguinte site: [Repositório](https://github.com/Davi-D18/desafio3_livros_vnw)
 
 ## Estrutura do Projeto
 
