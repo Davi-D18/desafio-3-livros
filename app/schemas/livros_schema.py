@@ -13,3 +13,4 @@ class LivrosSchema(Schema):
     categoria = fields.Str(required=True)
     autor = fields.Str(required=True)
     image_url = fields.Str(required=True)
+    paginas = fields.Int(required=True)

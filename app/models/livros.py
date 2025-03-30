@@ -5,4 +5,5 @@ class Livros(db.Model):
     titulo = db.Column(db.String(100), nullable=False)
     categoria = db.Column(db.Text, nullable=False)
     autor = db.Column(db.Text, nullable=False)
+    paginas = db.Column(db.Integer, nullable=False)
     image_url = db.Column(db.Text, nullable=False)

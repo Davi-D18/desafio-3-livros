@@ -43,7 +43,8 @@ def create():
         data['titulo'],
         data['categoria'],
         data['autor'],
-        data['image_url']
+        data['image_url'],
+        data['paginas']
     )
 
     match(status):
