@@ -57,6 +57,18 @@ Para acessar mais informações das rotas, você pode clonar o repositório e ac
 
 O projeto utiliza **Postgres** como banco de dados. A configuração está localizada em `app/database/config.py`.
 
+## Bibliotecas Utilizadas
+
+- **Flask:** Microframework web simples e flexível para criação de aplicações e APIs.  
+- **Marshmallow:** Ferramenta para serialização e validação de dados entre objetos Python e formatos como JSON.  
+- **Flask-SQLAlchemy:** Integra o ORM SQLAlchemy ao Flask, facilitando o mapeamento de objetos para o banco de dados.  
+- **Flask-Migrate:** Gerencia migrações de banco de dados no Flask, utilizando o Alembic para versionamento.  
+- **Flasgger:** Integra Swagger ao Flask para gerar documentação interativa das APIs.  
+- **Psycopg2:** Adaptador que conecta o Python ao PostgreSQL, facilitando a manipulação do banco de dados.
+- **Gunicorn:** Servidor WSGI HTTP para aplicações Python, usado para executar a aplicação em produção.
+- **Python-dotenv:** Biblioteca para carregar variáveis de ambiente de um arquivo `.env`.
+- **Psycopg2-binary:** Adaptador para o banco de dados PostgreSQL, permitindo a conexão e interação com o banco.
+
 ## Como Executar o Projeto
 
 1. Clone o repositório:
